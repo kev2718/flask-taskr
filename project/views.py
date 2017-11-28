@@ -31,6 +31,7 @@ def logout():
     flash("Goodbye")
     return redirect(url_for("login"))
 
+# login handler 
 @app.route("/", methods=["GET", "POST"])
 def login():
     error = None

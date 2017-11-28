@@ -6,6 +6,7 @@
 <h3>Please login to access your task list.</h3>
 
 <form method="post" action="/">
+    <!-- security token -->
   {{ form.csrf_token }}
   <div>
     {{ form.name.label }}
