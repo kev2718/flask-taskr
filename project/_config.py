@@ -5,8 +5,6 @@ import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 DATABASE = "flasktaskr.db"
-USERNAME = "admin"
-PASSWORD = "admin"
 
 # is used for cross-site request forgery prevention (app goes more secure)
 CSRF_ENABLED = True
