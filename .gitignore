@@ -3,5 +3,4 @@ venv
 *.pyc
 project/__pycache__
 *.DS_Store
-project/_config.py
-project/flasktaskr.db
+project/*.db
