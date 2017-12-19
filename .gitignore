@@ -4,3 +4,5 @@ venv
 project/__pycache__
 *.DS_Store
 project/*.db
+.coverage
+project/htmlcov

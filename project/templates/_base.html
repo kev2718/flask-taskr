@@ -1,26 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Welcome to FlaskTaskr!!</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Welcome to FlaskTaskr!!!</title>
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}" sizes="32x32">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
     <body>
-        <div class="page">
-            {% for message in get_flashed_messages() %}
-                <div class="flash">
-                    {{ message }}
+        <div class="container">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">FlaskTaskr</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        {% if not session.logged_in %}
+                            <li><a href="/register">Signup</a></li>
+                        {% else %}
+                            <li><a href="/logout">Signout</a></li>
+                        {% endif %}
+                    </ul><!--/.nav-collapse -->
                 </div>
-            {% endfor %}
+            </nav>
+            <div class="container">
+                <div class="content">
+                    {% for message in get_flashed_messages() %}
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            {{ message }}
+                        </div>
 
-            {% if error %}
-                <div class="error">
-                    <strong>Error:</strong> {{ error }}
+                    {% endfor %}
+                    {% if error %}
+                        <div class="error"><strong>Error:</strong> {{ error }}</div>
+                    {% endif %}
+                    {% block content %}
+                    <!-- Content goes here -->
+                    {% endblock %}
                 </div>
-            {% endif %}
-            <br>
-            {% block content %}
-            {% endblock %}
+                <div class="footer">
+                    <hr>
+                    <p>&copy; Bartez</p>
+                </div>
+            </div><!-- /.container -->
         </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     </body>
 </html>
