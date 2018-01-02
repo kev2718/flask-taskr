@@ -4,8 +4,9 @@ import os
 # grab the folder where this script lives
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-DATABASE = "flasktaskr.db"
+DEBUG=True
 
+DATABASE = "flasktaskr.db"
 # is used for cross-site request forgery prevention (app goes more secure)
 CSRF_ENABLED = True
 SECRET_KEY = "je|zUn@B6vYC4x&dl`_?uM|cEWp;'S"

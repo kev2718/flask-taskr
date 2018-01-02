@@ -1,8 +1,8 @@
 env
 venv
 *.pyc
-project/__pycache__
+__pycache__
 *.DS_Store
-project/*.db
+*.db
 .coverage
-project/htmlcov
+htmlcov
