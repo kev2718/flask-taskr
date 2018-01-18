@@ -13,3 +13,8 @@ Running local Server
 
 Launching Webapp
 http://localhost:5000
+
+## RESTful API
+Call `localhost:5000/api/v1/tasks/` for a json Object of all Tasks
+
+and `localhost:5000/api/v1/tasks/<int:task_id>` for a json Object of a single Task
