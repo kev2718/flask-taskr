@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kev2718/flask-taskr.svg?branch=master)](https://travis-ci.org/kev2718/flask-taskr)
+
 # flask-taskr
 This is a simple Taskmanager written in Python with Microframework [Flask](http://flask.pocoo.org/ "Flask Homepage").
 
