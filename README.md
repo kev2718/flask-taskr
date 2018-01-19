@@ -6,7 +6,7 @@ Install dependencies
 `pip install -r requirements.txt`
 
 Setting up Database
-`python db_create.py`
+`python project/db_create.py`
 
 Running local Server
 `python run.py`
