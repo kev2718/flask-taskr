@@ -12,4 +12,6 @@ deploy:
     secure: I9trjU7Qc92M4+/ZnulUgqyyMW6cWNiyNShhz7MTrwdRJhstnZxi6sI+9QBxOKe/rmGahtkniA53yvSF1lTFFIfFxvdhlM+QB4dsRlu3QTvYl+d/Rab9nGxbL/+7twm54XfxM/Ice/igk0ideQ+YUQS4QGq5oBr2IXIisOW89b00fYvmbGBYP93sVwqAHE28oAjtleQX/G3asP4hHU3UPVbycRhje39aZhJ2Iz2hbDqKsfZC0bGZDOTUy9BvEkHYFuoR0cDSiZHeXCKJzWFT8CxMRy+QazT28Kx1qQsdbH1tZsOX0HMrygwJtGt8AVNnwBaYBH/w4hx/RV+b5h8E0bwR8yDFo/5qo4N6e0aAj6r8cn6fTKQdzcLPcXaUQG1JjpkK/P1wicqo9v9HiANXkegQBPMkvsqul47LZ7O6nA/X8JdJ9aNcpWcA984mfxHR8AcbX9U7MtV7Xc2yRuh+2x6GfyRRyKEY7Ei2Ty47tXeagZwH4qHcCqlkFtbqCK8BKWXOXmGqSHf9r0s8kk5hHDI/K0+ND35cDcPobOoSj2VpYbLdxkgheVKiV/3nsNfFSKLHqi1Axh6/gQ4JgBg3N3n1ucTrC6bFC03s0jihOuM4l9yObZ2+ldKy7JOcjzD3zb0BQsUYsQ0ann3STQZqFvU7+H0xbQtMYBHAADOOO2g=
   app: kevs-taskr
   on:
+    branch: master
+    python: '3.6'
     repo: kev2718/flask-taskr
